@@ -3,6 +3,8 @@ import cors from "cors";
 import dns from "node:dns";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import 'dotenv/config'
 
 // Google DNS
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
@@ -21,6 +23,7 @@ connectDB();
 // api endpoints
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
+app.use("/api/user" , userRouter)
 
 app.get("/", (req, res) => {
   res.send("API WORKING");
