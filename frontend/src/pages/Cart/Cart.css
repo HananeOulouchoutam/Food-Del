@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
   align-items: center;
   color: grey;
-  font-size: max(1vw , 12px);
+  font-size: max(1vw, 12px);
 }
 
 .cart-items-item {
@@ -25,17 +25,15 @@
   border: none;
 }
 
-
 .cross {
   cursor: pointer;
 }
-
 
 .cart-bottom {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  gap: max(12vw , 20px);
+  gap: max(12vw, 20px);
 }
 
 .cart-total {
@@ -52,21 +50,21 @@
 }
 
 .cart-total hr {
-  margin: 10px  0px;
+  margin: 10px 0px;
 }
 
 .cart-total button {
   border: none;
   color: white;
-  background-color: tomato;
-  width: max(15vw , 200px);
+  background-color: #e53935;
+  width: max(15vw, 200px);
   padding: 12px 0px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .cart-promocode {
-  flex:1;
+  flex: 1;
 }
 
 .cart-promocode p {
@@ -89,23 +87,21 @@
   padding-left: 10px;
 }
 
-
 .cart-promocode-input button {
-  width: max(10vw , 150px);
+  width: max(10vw, 150px);
   padding: 12px 5px;
-  background-attachment: black;
+  background-color: black;
   border: none;
   color: white;
   border-radius: 4px;
 }
 
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column-reverse;
+  }
 
-@media (max-width:750px) {
-    .cart-bottom {
-      flex-direction: column-reverse;
-    }
-
-    .cart-promocode {
-      justify-content: start;
-    }
+  .cart-promocode {
+    justify-content: start;
+  }
 }

@@ -20,7 +20,7 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <img src={assets.logo} alt="tomato logo" className="logo" />
+        <img src={assets.logo} alt="#e53935 logo" className="logo" />
       </Link>
       <ul className="navbar-menu">
         <li>
@@ -77,7 +77,7 @@ const Navbar = ({ setShowLogin }) => {
           <div className="navbar-profile">
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
-              <li>
+              <li onClick={() => navigate("/myorders")}>
                 <img src={assets.bag_icon} alt="" />
                 <p>Orders</p>
               </li>
